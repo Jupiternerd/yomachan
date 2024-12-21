@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default async function ChapterPage({ 
     params 
 }: { 
-    params: { novelId: string; chapterNumber: string } 
+    params: Promise<{ novelId: string; chapterNumber: string }>
 }) {
     const { novelId, chapterNumber } = await params;
 

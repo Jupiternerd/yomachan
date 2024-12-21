@@ -1,7 +1,7 @@
 import NextAuth from "next-auth"
 import Discord from "next-auth/providers/discord"
 import { env } from "process"
-import { getUser, updateOrCreateUser } from "@/lib/queries/users"
+import { updateOrCreateUser } from "@/lib/queries/users"
 
 const handler = NextAuth({
     providers: [

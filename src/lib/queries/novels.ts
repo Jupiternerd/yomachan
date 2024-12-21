@@ -1,6 +1,6 @@
 import { NovelType } from '../struct/novels'
 import db from '@/lib/mongodb'
-import { ObjectId } from 'mongodb'
+import { Filter, ObjectId } from 'mongodb'
 export async function getNovel(novelId: string) {
   return await db.collection<NovelType>("novels").findOne({ _id: new ObjectId(novelId)})
 }
@@ -12,7 +12,7 @@ export async function getTopNovels({
   limit = 20,
   page = 1
 }) {
-  const filter: any = {}
+  const filter: Filter<NovelType> = {}
   if (genre) filter.genre = genre
   if (status) filter.status = status
   
@@ -32,7 +32,7 @@ export async function getTopNovels({
     .toArray()
     
   const total = await db
-    .collection("novels")
+    .collection<NovelType>("novels")
     .countDocuments(filter)
     
   return {

@@ -1,6 +1,4 @@
 import { Metadata } from "next";
-import AuthButton from "./components/navbar/userBar";
-
 export const metadata: Metadata = {
   title: "Yomachan",
   description: "READ BRO READ",

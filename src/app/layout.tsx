@@ -6,11 +6,6 @@ import Providers from "./components/authProvider";
 import Navbar from "./components/navbar/navBar";
 import Footer from "./components/footer/footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",

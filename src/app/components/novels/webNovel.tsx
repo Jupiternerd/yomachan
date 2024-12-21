@@ -49,7 +49,7 @@ export function WebNovel({
 }: WebNovelProps) {
   const [isFocused, setIsFocused] = useState(false)
 
-  let auth = useSession()
+  const auth = useSession()
 
   return (
     <ContextMenu>

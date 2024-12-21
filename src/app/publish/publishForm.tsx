@@ -61,7 +61,7 @@ export function PublishForm({ type, step, onStepChange }: PublishFormProps) {
   const [coverImage, setCoverImage] = useState<File | null>(null)
   const [previewUrl, setPreviewUrl] = useState<string | null>(null)
   
-  const { register, handleSubmit, watch } = useForm<PublishFormData>({
+  const { register, handleSubmit } = useForm<PublishFormData>({
     defaultValues: {
       type,
       isMature: false,
